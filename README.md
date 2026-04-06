@@ -3,9 +3,12 @@ Custom device driver for Raspberry Pi powered handheld device. This software dri
 
 # build and load
 cd controller
+
 make
+
 sudo ./controller
 
 // To test
+
 sudo jstest /dev/input/js0
 
