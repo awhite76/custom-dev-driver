@@ -155,8 +155,7 @@ static const char *scan_button_matrix(struct gpiod_chip *chip)
     for (int i = 0; i < 4; i++)
     {
         c[i] = gpiod_chip_get_line(chip, inputs[i]);
-        gpiod_line_request_input_flags(c[i], "col",
-                                       GPIOD_LINE_REQUEST_FLAG_BIAS_PULL_UP);
+	gpiod_line_request_input(c[i], "col");
     }
 
     const char *pressed = "None";
